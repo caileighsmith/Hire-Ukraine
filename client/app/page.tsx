@@ -1,67 +1,37 @@
+import { Description } from '@mui/icons-material';
 import ciscoLogo from '../public/cisco-logo.png'
 
 const companies = [
   {
     name: "Cisco",
-    hiring: true
+    hiring: true,
+    link: "https://cisco4ukraine.pl/career/",
+    description: "Cisco offers apprenticeships, in partnership with the University of Information Technology and Management in Rzeszow, Poland."
   },
   {
 
     name: "Amazon",
-    hiring: true
+    hiring: true,
+    link: "https://hiring.amazon.com/our-team/refugees",
+    description: "Amazon is hiring refugees, which includes displaced Ukranians as part of their promise to hire at least 5,000 refugees, with a focus on Ukranians, accross Europe."
   },
   {
-    name: "Google",
-    hiring: true
+    name: 'Hilton',
+    hiring: true,
+    link: "https://jobs.hilton.com/diversity",
+    description: "Hilton has committed to hiring at least 1,500 Ukranians and refugees accross Europe."
   },
   {
-    name: "Meta",
-    hiring: true
+    name: 'Marriot International',
+    hiring: true,
+    link: "https://careers.marriott.com/career-journeys/refugees/jobs/page/485",
+    description: "Marriot has committed to hiring at least 1,500 Ukranians and refugees accross Europe."
   },
   {
-    name: "Microsoft",
-    hiring: false
-  },{
-    name: "Cisco",
-    hiring: true
+    name: 'UK GOV',
+    hiring: true,
+    link: "https://www.gov.uk/offer-work-ukraine"
   },
-  {
-
-    name: "Amazon",
-    hiring: true
-  },
-  {
-    name: "Google",
-    hiring: true
-  },
-  {
-    name: "Meta",
-    hiring: true
-  },
-  {
-    name: "Microsoft",
-    hiring: false
-  },{
-    name: "Cisco",
-    hiring: true
-  },
-  {
-
-    name: "Amazon",
-    hiring: true
-  },
-  {
-    name: "Google",
-    hiring: true
-  },
-  {
-    name: "Meta",
-    hiring: true
-  },
-  {
-    name: "Microsoft",
-    hiring: false
-  }
 
 ]
 
@@ -162,7 +132,7 @@ export default function Home() {
                     {company.hiring ? "Yes" : "No"}
                 </td>
                 <td className="px-6 py-4">
-                    LINKBELONGSHERE
+                    <a href={company.link} className="text-blue-600 dark:text-blue-400 underline"  target="_blank" rel="noopener">{company.name}</a>
                 </td>
             </tr>
           ))}
